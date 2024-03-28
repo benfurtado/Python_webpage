@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Scanner</title>
+</head>
+<body onload="startScan()">
+    <h1>Scanning</h1>
+    
+    <!-- Video feed from the camera -->
+    <img id="video_feed" src="{% url 'video_feed' %}" width="640" height="480" style="display: block; margin-bottom: 10px;">
+    
+    <!-- Buttons to start and stop barcode scanning -->
+    <button onclick="stopScan()">Stop Scan</button>
+    
+    <script src="{% static 'scan.js' %}"></script>
+</body>
+</html>
